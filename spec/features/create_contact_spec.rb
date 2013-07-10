@@ -10,5 +10,6 @@ describe "create contact", :type => :feature do
       fill_in 'Phone', :with => '0632465955'
       click_button 'Create'
     end.to change{Contact.count}.by(1)
+    current_path.should == "/contacts/new"
   end
 end
